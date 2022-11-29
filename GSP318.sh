@@ -25,10 +25,8 @@ docker push gcr.io/$GOOGLE_CLOUD_PROJECT/valkyrie-app:v0.0.1
 
 gcloud container clusters create valkyrie-dev \
 --num-nodes 2 \
---machine-type n1-standard-2 \
---zone us-west1-a \
---scopes "https://www.googleapis.com/auth/source.read_write,cloud-platform"
-
+--machine-type c2-standard-4 \
+--zone us-east1-b 
 
 gcloud container clusters get-credentials valkyrie-dev --region us-west1-a 
 
